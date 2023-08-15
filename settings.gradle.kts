@@ -14,5 +14,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "PMovie"
-include(":app")
+include(":androidApp")
+include(":desktopApp")
 include(":shared")
