@@ -32,8 +32,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlin {
         jvmToolchain(17)
@@ -52,6 +52,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":shared"))
     implementation(libs.activity.compose)
     implementation(compose.material3)
     implementation(compose.uiTooling)

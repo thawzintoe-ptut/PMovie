@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PMovie"
 include(":app")
- 
+include(":shared")
