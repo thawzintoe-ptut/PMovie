@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'shared'
     spec.version                  = '1.0.0'
-    spec.homepage                 = ''
+    spec.homepage                 = 'https://github.com/thawzintoe-ptut/PMovie'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
     spec.license                  = ''

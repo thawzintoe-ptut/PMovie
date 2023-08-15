@@ -24,7 +24,9 @@ kotlin {
     cocoapods {
         summary = "Shared iosCode for PMovie"
         version = "1.0.0"
+        homepage = "https://github.com/thawzintoe-ptut/PMovie"
         ios.deploymentTarget = "14.1"
+        podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
             isStatic = true
