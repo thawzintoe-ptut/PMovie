@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import shared
 
 @main
 struct PMovieApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ComposeView()
         }
+    }
+}
+
+struct ComposeView: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> some UIViewController {
+        return UIViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
     }
 }

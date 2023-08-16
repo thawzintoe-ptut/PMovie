@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		27F81616F4B9589717D3CDBB /* Pods_PMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D47975EE05BEF875213F2F /* Pods_PMovie.framework */; };
 		2CE7B1A62A8BD159008F7C45 /* PMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE7B1A52A8BD159008F7C45 /* PMovieApp.swift */; };
-		2CE7B1A82A8BD159008F7C45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE7B1A72A8BD159008F7C45 /* ContentView.swift */; };
 		2CE7B1AA2A8BD15A008F7C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE7B1A92A8BD15A008F7C45 /* Assets.xcassets */; };
 		2CE7B1AD2A8BD15A008F7C45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE7B1AC2A8BD15A008F7C45 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		2CE7B1A22A8BD159008F7C45 /* PMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE7B1A52A8BD159008F7C45 /* PMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMovieApp.swift; sourceTree = "<group>"; };
-		2CE7B1A72A8BD159008F7C45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CE7B1A92A8BD15A008F7C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CE7B1AC2A8BD15A008F7C45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95E130287934DDAE196DDD6C /* Pods-PMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMovie.release.xcconfig"; path = "Target Support Files/Pods-PMovie/Pods-PMovie.release.xcconfig"; sourceTree = "<group>"; };
@@ -43,7 +41,6 @@
 				98C7803061036A98EAE2384C /* Pods-PMovie.debug.xcconfig */,
 				95E130287934DDAE196DDD6C /* Pods-PMovie.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -69,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				2CE7B1A52A8BD159008F7C45 /* PMovieApp.swift */,
-				2CE7B1A72A8BD159008F7C45 /* ContentView.swift */,
 				2CE7B1A92A8BD15A008F7C45 /* Assets.xcassets */,
 				2CE7B1AB2A8BD15A008F7C45 /* Preview Content */,
 			);
@@ -188,7 +184,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CE7B1A82A8BD159008F7C45 /* ContentView.swift in Sources */,
 				2CE7B1A62A8BD159008F7C45 /* PMovieApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
