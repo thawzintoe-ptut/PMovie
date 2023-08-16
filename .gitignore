@@ -13,3 +13,12 @@
 .externalNativeBuild
 .cxx
 local.properties
+shared/build
+shared/.gradle
+webApp/build
+webApp/.gradle
+iosApp/build
+iosApp/PMovie.xcworkspace/xcuserdata
+androidApp/build
+androidApp/.gradle
+```
