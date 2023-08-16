@@ -1,5 +1,6 @@
 *.iml
 .gradle
+.idea
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -19,6 +20,7 @@ webApp/build
 webApp/.gradle
 iosApp/build
 iosApp/PMovie.xcworkspace/xcuserdata
+iosApp/Pods/Pods.xcodeproj/xcuserdata
 androidApp/build
 androidApp/.gradle
 ```

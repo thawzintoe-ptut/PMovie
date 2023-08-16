@@ -7,7 +7,6 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
@@ -19,4 +18,5 @@ rootProject.name = "PMovie"
 include(":androidApp")
 include(":desktopApp")
 include(":iosApp")
+include(":webApp")
 include(":shared")

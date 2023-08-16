@@ -17,6 +17,11 @@ kotlin {
         jvmToolchain(17)
     }
 
+    js(IR) {
+        browser()
+        binaries.executable()
+    }
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -55,6 +60,12 @@ kotlin {
         val desktopMain by getting {
             dependencies {
                 // Desktop dependencies
+            }
+        }
+
+        val jsMain by getting {
+            dependencies {
+                // JVM dependencies
             }
         }
 
