@@ -8,7 +8,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.ptut.movie.app.shared.data.MovieItem
+import com.ptut.movie.app.shared.data.model.MovieItem
 
 @Composable
 internal fun MovieList(

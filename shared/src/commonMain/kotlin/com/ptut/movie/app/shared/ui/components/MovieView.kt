@@ -19,8 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import com.ptut.movie.app.shared.SharedRes
+import com.ptut.movie.app.shared.utils.AppConstant
+import com.seiko.imageloader.rememberAsyncImagePainter
 import dev.icerock.moko.resources.compose.fontFamilyResource
-import dev.icerock.moko.resources.compose.painterResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -40,7 +41,11 @@ fun MovieView(
                 .align(Alignment.CenterHorizontally)
         ) {
             Image(
-                painter = painterResource(SharedRes.images.kermit),
+                painter = rememberAsyncImagePainter(
+                    AppConstant.IMAGE_URL.plus(
+                        moviePoster
+                    )
+                ),
                 contentDescription = moviePoster,
                 modifier = Modifier.fillMaxWidth()
                     .size(150.dp)
@@ -56,10 +61,11 @@ fun MovieView(
                 text = movieTitle,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 5.dp),
+                    .padding(horizontal = 8.dp),
                 style = MaterialTheme.typography.bodySmall,
                 fontFamily = fontFamilyResource(SharedRes.fonts.Poppins.medium),
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                maxLines = 1
             )
             Spacer(Modifier.padding(8.dp))
         }

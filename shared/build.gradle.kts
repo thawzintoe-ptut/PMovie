@@ -4,6 +4,7 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.compose")
     id("dev.icerock.mobile.multiplatform-resources")
+    kotlin("plugin.serialization")
 }
 
 kotlin {
@@ -67,11 +68,23 @@ kotlin {
                 api(libs.mvvm.compose) // api mvvm-core, getViewModel for Compose Multiplatfrom
                 api(libs.mvvm.flow.compose) // api mvvm-flow, binding extensions for Compose Multiplatfrom
                 api(libs.mvvm.livedata.compose) // api mvvm-livedata, binding extensions for Compose Multiplatfrom
+
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.logging)
+                implementation(libs.ktor.serialization.kotlinx.json)
+                implementation(libs.ktor.client.content.negotiation)
+
+                api(libs.image.loader)
             }
         }
 
         val androidMain by getting {
-            dependencies {}
+            dependencies {
+                api(libs.activity.compose)
+                api(libs.appcompat)
+                api(libs.core.ktx)
+                implementation(libs.ktor.client.okhttp)
+            }
         }
 
         val desktopMain by getting {
@@ -95,6 +108,8 @@ kotlin {
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
             dependencies {
+                implementation(libs.ktor.client.darwin)
+                implementation(libs.ktor.client.ios)
             }
         }
     }
@@ -121,4 +136,15 @@ android {
     kotlin {
         jvmToolchain(17)
     }
+}
+
+inline fun <reified ValueT> com.android.build.api.dsl.VariantDimension.buildConfigField(
+    name: String,
+    value: ValueT
+) {
+    val resolvedValue = when (value) {
+        is String -> "\"$value\"" // hate this
+        else -> value
+    }.toString()
+    buildConfigField(ValueT::class.java.simpleName, name, resolvedValue)
 }

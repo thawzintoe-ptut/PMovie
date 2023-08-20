@@ -5,6 +5,10 @@ pluginManagement {
         gradlePluginPortal()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
+    plugins {
+        val kotlinVersion = extra["kotlin.version"] as String
+        kotlin("plugin.serialization").version(kotlinVersion)
+    }
 }
 dependencyResolutionManagement {
     repositories {

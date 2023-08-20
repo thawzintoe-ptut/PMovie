@@ -1,7 +1,6 @@
-package com.ptut.movie.app.shared.data
+package com.ptut.movie.app.shared.data.model
 
 import kotlinx.serialization.Serializable
-import kotlin.random.Random
 
 @Serializable
 data class MovieItem(

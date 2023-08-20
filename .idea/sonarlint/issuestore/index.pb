@@ -26,8 +26,6 @@ w
 Gshared/src/commonMain/kotlin/com/ptut/movie/app/shared/ui/theme/Type.kt,c/d/cd80d1850efdb7ecc9bca88672176db7e5487566
 c
 3shared/src/commonMain/resources/MR/base/strings.xml,b/6/b6194a82294915608821e9839372d4d5a48a5e16
-I
-gradle/libs.versions.toml,d/7/d7595319a0658be6f1ed500ad590d42e4b28bc4f
 m
 =shared/src/commonMain/kotlin/com/ptut/movie/app/shared/App.kt,3/0/30b3578c9289dabf1cd3cffeaf15fef554541c25
 x
@@ -36,5 +34,3 @@ Hshared/src/commonMain/kotlin/com/ptut/movie/app/shared/data/MovieItem.kt,c/b/c
 Yshared/src/commonMain/kotlin/com/ptut/movie/app/shared/ui/components/ShimmerBackground.kt,c/2/c2f05decdd7bb2273d23bc1d88518283b9465d4b
 w
 Gshared/src/commonMain/kotlin/com/ptut/movie/app/shared/utils/UtilExt.kt,1/c/1cfc9f42aa219a5df4e25f6a683cfb34c6afa7d5
-@
-build.gradle.kts,d/b/dbcff70658daf80b53ce624f6adcaa529df5ed8d

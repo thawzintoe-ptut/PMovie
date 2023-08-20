@@ -17,7 +17,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.ptut.movie.app.shared.SharedRes
 import com.ptut.movie.app.shared.ui.components.MovieList
 import com.ptut.movie.app.shared.ui.components.ProgressIndicator
