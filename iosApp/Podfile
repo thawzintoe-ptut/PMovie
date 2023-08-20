@@ -1,5 +1,4 @@
 target 'PMovie' do
     use_frameworks!
     pod 'shared', :path => '../shared'
-    pod 'mokoMvvmFlowSwiftUI', :podspec => 'https://raw.githubusercontent.com/icerockdev/moko-mvvm/release/0.16.1/mokoMvvmFlowSwiftUI.podspec'
 end

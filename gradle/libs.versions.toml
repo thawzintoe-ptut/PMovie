@@ -3,6 +3,7 @@ agp = "8.2.0-alpha16"
 kotlin = "1.8.20"
 compose = "1.4.3"
 activity-compose = "1.7.2"
+kotlinxSerializationJson = "1.5.1"
 mvvmCore = "0.16.1"
 resourcesVersion = "0.23.0"
 
@@ -11,6 +12,7 @@ activity-compose = { group = "androidx.activity", name = "activity-compose", ver
 
 
 # moko libraries
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 moko-resources = { module = "dev.icerock.moko:resources", version.ref = "resourcesVersion" }
 moko-resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "resourcesVersion" }
 moko-gradle-plugin = { module = "dev.icerock.moko:resources-generator", version.ref = "resourcesVersion" }

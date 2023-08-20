@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.ptut.pmovie"
-    compileSdk = 34
+    compileSdk = (findProperty("android.compileSdk") as String).toInt()
 
     defaultConfig {
         applicationId = "com.ptut.pmovie"
-        minSdk = 29
-        targetSdk = 34
+        minSdk = (findProperty("android.minSdk") as String).toInt()
+        targetSdk = (findProperty("android.targetSdk") as String).toInt()
         versionCode = 1
         versionName = "1.0"
 

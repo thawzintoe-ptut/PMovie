@@ -40,9 +40,9 @@ kotlin {
             export("dev.icerock.moko:graphics:0.9.0")
             export("dev.icerock.moko:mvvm-core:0.16.1")
             export("dev.icerock.moko:mvvm-livedata:0.16.1")
-            export("dev.icerock.moko:mvvm-livedata-resources:0.16.1")
             export("dev.icerock.moko:mvvm-state:0.16.1")
         }
+        extraSpecAttributes["resources"] = "['src/commonMain/resources/**', 'src/iosMain/resources/**']"
     }
 
     // Platform - specific dependencies
@@ -55,6 +55,7 @@ kotlin {
                 implementation(compose.materialIconsExtended)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                implementation(libs.kotlinx.serialization.json)
 
                 api(libs.moko.resources)
                 api(libs.moko.resources.compose)
@@ -102,18 +103,22 @@ kotlin {
 multiplatformResources {
     multiplatformResourcesPackage = "com.ptut.movie.app.shared"
     multiplatformResourcesClassName = "SharedRes"
+    disableStaticFrameworkWarning = true
+    iosBaseLocalizationRegion = "en"
 }
 
 android {
     namespace = "com.ptut.movie.app.shared"
-    compileSdk = 33
-
+    compileSdk = (findProperty("android.compileSdk") as String).toInt()
     defaultConfig {
-        minSdk = 24
+        minSdk = (findProperty("android.minSdk") as String).toInt()
 
         compileOptions {
             sourceCompatibility = JavaVersion.VERSION_17
             targetCompatibility = JavaVersion.VERSION_17
         }
+    }
+    kotlin {
+        jvmToolchain(17)
     }
 }

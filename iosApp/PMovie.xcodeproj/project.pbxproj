@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27F81616F4B9589717D3CDBB /* Pods_PMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D47975EE05BEF875213F2F /* Pods_PMovie.framework */; };
 		2CE7B1A62A8BD159008F7C45 /* PMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE7B1A52A8BD159008F7C45 /* PMovieApp.swift */; };
 		2CE7B1AA2A8BD15A008F7C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE7B1A92A8BD15A008F7C45 /* Assets.xcassets */; };
 		2CE7B1AD2A8BD15A008F7C45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE7B1AC2A8BD15A008F7C45 /* Preview Assets.xcassets */; };
+		C3B9EF2886E04D54B3AE48D5 /* Pods_PMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAF55D7462ED367A3FC20ED /* Pods_PMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,9 +18,9 @@
 		2CE7B1A52A8BD159008F7C45 /* PMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMovieApp.swift; sourceTree = "<group>"; };
 		2CE7B1A92A8BD15A008F7C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CE7B1AC2A8BD15A008F7C45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		95E130287934DDAE196DDD6C /* Pods-PMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMovie.release.xcconfig"; path = "Target Support Files/Pods-PMovie/Pods-PMovie.release.xcconfig"; sourceTree = "<group>"; };
-		98C7803061036A98EAE2384C /* Pods-PMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMovie.debug.xcconfig"; path = "Target Support Files/Pods-PMovie/Pods-PMovie.debug.xcconfig"; sourceTree = "<group>"; };
-		C7D47975EE05BEF875213F2F /* Pods_PMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BAF55D7462ED367A3FC20ED /* Pods_PMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D53759B7F75F875AA938556 /* Pods-PMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMovie.release.xcconfig"; path = "Target Support Files/Pods-PMovie/Pods-PMovie.release.xcconfig"; sourceTree = "<group>"; };
+		CFDE3A06DA0F99557CC40EAA /* Pods-PMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMovie.debug.xcconfig"; path = "Target Support Files/Pods-PMovie/Pods-PMovie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27F81616F4B9589717D3CDBB /* Pods_PMovie.framework in Frameworks */,
+				C3B9EF2886E04D54B3AE48D5 /* Pods_PMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +38,8 @@
 		16A7E9887332400A55F71E87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				98C7803061036A98EAE2384C /* Pods-PMovie.debug.xcconfig */,
-				95E130287934DDAE196DDD6C /* Pods-PMovie.release.xcconfig */,
+				CFDE3A06DA0F99557CC40EAA /* Pods-PMovie.debug.xcconfig */,
+				9D53759B7F75F875AA938556 /* Pods-PMovie.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -50,7 +50,7 @@
 				2CE7B1A42A8BD159008F7C45 /* PMovie */,
 				2CE7B1A32A8BD159008F7C45 /* Products */,
 				16A7E9887332400A55F71E87 /* Pods */,
-				BDCD7DCD3B1EF4979BEE0630 /* Frameworks */,
+				DD74C5AC4F36508715669CA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,10 +80,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BDCD7DCD3B1EF4979BEE0630 /* Frameworks */ = {
+		DD74C5AC4F36508715669CA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C7D47975EE05BEF875213F2F /* Pods_PMovie.framework */,
+				3BAF55D7462ED367A3FC20ED /* Pods_PMovie.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -95,10 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CE7B1B02A8BD15A008F7C45 /* Build configuration list for PBXNativeTarget "PMovie" */;
 			buildPhases = (
-				EDBB86DF0C3A3CAB1165B220 /* [CP] Check Pods Manifest.lock */,
+				E03A8EBB3B373775671DDCE6 /* [CP] Check Pods Manifest.lock */,
 				2CE7B19E2A8BD159008F7C45 /* Sources */,
 				2CE7B19F2A8BD159008F7C45 /* Frameworks */,
 				2CE7B1A02A8BD159008F7C45 /* Resources */,
+				6BF5EF5BF74660CAC4DFA121 /* [CP] Copy Pods Resources */,
+				2C40B5F42A926AFC00375663 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -155,7 +157,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EDBB86DF0C3A3CAB1165B220 /* [CP] Check Pods Manifest.lock */ = {
+		2C40B5F42A926AFC00375663 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/../gradlew\" -p \"$SRCROOT/../\" :shared:copyFrameworkResourcesToApp \\\n    -Pmoko.resources.BUILT_PRODUCTS_DIR=\"$BUILT_PRODUCTS_DIR\" \\\n    -Pmoko.resources.CONTENTS_FOLDER_PATH=\"$CONTENTS_FOLDER_PATH\" \\\n    -Pkotlin.native.cocoapods.platform=\"$PLATFORM_NAME\" \\\n    -Pkotlin.native.cocoapods.archs=\"$ARCHS\" \\\n    -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\" \n";
+		};
+		6BF5EF5BF74660CAC4DFA121 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PMovie/Pods-PMovie-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PMovie/Pods-PMovie-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PMovie/Pods-PMovie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E03A8EBB3B373775671DDCE6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,7 +343,7 @@
 		};
 		2CE7B1B12A8BD15A008F7C45 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98C7803061036A98EAE2384C /* Pods-PMovie.debug.xcconfig */;
+			baseConfigurationReference = CFDE3A06DA0F99557CC40EAA /* Pods-PMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -337,7 +373,7 @@
 		};
 		2CE7B1B22A8BD15A008F7C45 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95E130287934DDAE196DDD6C /* Pods-PMovie.release.xcconfig */;
+			baseConfigurationReference = 9D53759B7F75F875AA938556 /* Pods-PMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
