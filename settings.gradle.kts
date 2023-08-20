@@ -18,5 +18,4 @@ rootProject.name = "PMovie"
 include(":androidApp")
 include(":desktopApp")
 include(":iosApp")
-include(":webApp")
 include(":shared")

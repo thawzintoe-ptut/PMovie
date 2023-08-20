@@ -3,6 +3,7 @@ plugins {
     kotlin("native.cocoapods")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("dev.icerock.mobile.multiplatform-resources")
 }
 
 kotlin {
@@ -17,10 +18,10 @@ kotlin {
         jvmToolchain(17)
     }
 
-    js(IR) {
-        browser()
-        binaries.executable()
-    }
+//    js(IR) {
+//        browser()
+//        binaries.executable()
+//    }
 
     iosX64()
     iosArm64()
@@ -35,6 +36,12 @@ kotlin {
         framework {
             baseName = "shared"
             isStatic = true
+            export("dev.icerock.moko:resources:0.23.0")
+            export("dev.icerock.moko:graphics:0.9.0")
+            export("dev.icerock.moko:mvvm-core:0.16.1")
+            export("dev.icerock.moko:mvvm-livedata:0.16.1")
+            export("dev.icerock.moko:mvvm-livedata-resources:0.16.1")
+            export("dev.icerock.moko:mvvm-state:0.16.1")
         }
     }
 
@@ -48,13 +55,22 @@ kotlin {
                 implementation(compose.materialIconsExtended)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+
+                api(libs.moko.resources)
+                api(libs.moko.resources.compose)
+                api(libs.mvvm.core) // only ViewModel, EventsDispatcher, Dispatchers.UI
+                api(libs.mvvm.flow) // api mvvm-core, CFlow for native and binding extensions
+                api(libs.mvvm.livedata) // api mvvm-core, LiveData and extensions
+                api(libs.mvvm.state) // api mvvm-livedata, ResourceState class and extensions
+                // compose multiplatform
+                api(libs.mvvm.compose) // api mvvm-core, getViewModel for Compose Multiplatfrom
+                api(libs.mvvm.flow.compose) // api mvvm-flow, binding extensions for Compose Multiplatfrom
+                api(libs.mvvm.livedata.compose) // api mvvm-livedata, binding extensions for Compose Multiplatfrom
             }
         }
 
         val androidMain by getting {
-            dependencies {
-                // android dependencies
-            }
+            dependencies {}
         }
 
         val desktopMain by getting {
@@ -63,11 +79,11 @@ kotlin {
             }
         }
 
-        val jsMain by getting {
-            dependencies {
-                // JVM dependencies
-            }
-        }
+//        val jsMain by getting {
+//            dependencies {
+//                // JVM dependencies
+//            }
+//        }
 
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -81,6 +97,11 @@ kotlin {
             }
         }
     }
+}
+
+multiplatformResources {
+    multiplatformResourcesPackage = "com.ptut.movie.app.shared"
+    multiplatformResourcesClassName = "SharedRes"
 }
 
 android {

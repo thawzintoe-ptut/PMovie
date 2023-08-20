@@ -5,3 +5,9 @@ plugins {
     alias(libs.plugins.composeMultiplatform) apply false
     alias(libs.plugins.kotlinNativeCocoapods) apply false
 }
+
+buildscript {
+    dependencies {
+        classpath(libs.moko.gradle.plugin)
+    }
+}
