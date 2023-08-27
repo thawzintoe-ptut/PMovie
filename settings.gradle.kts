@@ -6,7 +6,7 @@ pluginManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
     plugins {
-        val kotlinVersion = extra["kotlin.version"] as String
+        val kotlinVersion = "1.8.20"
         kotlin("plugin.serialization").version(kotlinVersion)
     }
 }

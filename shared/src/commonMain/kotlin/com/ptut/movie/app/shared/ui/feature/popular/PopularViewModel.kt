@@ -1,4 +1,4 @@
-package com.ptut.movie.app.shared.ui.featurePopular
+package com.ptut.movie.app.shared.ui.feature.popular
 
 import com.ptut.movie.app.shared.data.model.MovieItem
 import com.ptut.movie.app.shared.domain.GetPopularMovie

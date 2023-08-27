@@ -1,3 +1,5 @@
+import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
+
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
@@ -5,6 +7,7 @@ plugins {
     id("org.jetbrains.compose")
     id("dev.icerock.mobile.multiplatform-resources")
     kotlin("plugin.serialization")
+    alias(libs.plugins.ktlint)
 }
 
 kotlin {
@@ -32,16 +35,16 @@ kotlin {
         summary = "Shared iosCode for PMovie"
         version = "1.0.0"
         homepage = "https://github.com/thawzintoe-ptut/PMovie"
-        ios.deploymentTarget = "14.1"
+        ios.deploymentTarget = "16.4"
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
             isStatic = true
-            export("dev.icerock.moko:resources:0.23.0")
+            export(libs.moko.resources)
             export("dev.icerock.moko:graphics:0.9.0")
-            export("dev.icerock.moko:mvvm-core:0.16.1")
-            export("dev.icerock.moko:mvvm-livedata:0.16.1")
-            export("dev.icerock.moko:mvvm-state:0.16.1")
+            export(libs.mvvm.core)
+            export(libs.mvvm.livedata)
+            export(libs.mvvm.state)
         }
         extraSpecAttributes["resources"] = "['src/commonMain/resources/**', 'src/iosMain/resources/**']"
     }
@@ -75,6 +78,8 @@ kotlin {
                 implementation(libs.ktor.client.content.negotiation)
 
                 api(libs.image.loader)
+                api(libs.voyager.navigator)
+                api(libs.voyager.tabNavigator)
             }
         }
 
@@ -115,6 +120,23 @@ kotlin {
     }
 }
 
+ktlint {
+    version.set(libs.versions.ktlint.get())
+    ignoreFailures.set(true)
+    verbose.set(true)
+    outputToConsole.set(true)
+    enableExperimentalRules.set(true)
+    reporters {
+        reporter(ReporterType.PLAIN)
+        reporter(ReporterType.CHECKSTYLE)
+        reporter(ReporterType.SARIF)
+    }
+    filter {
+        exclude("**/generated/**")
+        include("**/kotlin/**")
+    }
+}
+
 multiplatformResources {
     multiplatformResourcesPackage = "com.ptut.movie.app.shared"
     multiplatformResourcesClassName = "SharedRes"
@@ -124,9 +146,9 @@ multiplatformResources {
 
 android {
     namespace = "com.ptut.movie.app.shared"
-    compileSdk = (findProperty("android.compileSdk") as String).toInt()
+    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
-        minSdk = (findProperty("android.minSdk") as String).toInt()
+        minSdk = libs.versions.minSdk.get().toInt()
 
         compileOptions {
             sourceCompatibility = JavaVersion.VERSION_17
@@ -134,17 +156,6 @@ android {
         }
     }
     kotlin {
-        jvmToolchain(17)
+        jvmToolchain(libs.versions.jvmToolChain.get().toInt())
     }
-}
-
-inline fun <reified ValueT> com.android.build.api.dsl.VariantDimension.buildConfigField(
-    name: String,
-    value: ValueT
-) {
-    val resolvedValue = when (value) {
-        is String -> "\"$value\"" // hate this
-        else -> value
-    }.toString()
-    buildConfigField(ValueT::class.java.simpleName, name, resolvedValue)
 }
