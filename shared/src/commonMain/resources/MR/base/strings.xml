@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource>
+    <string name="hello_world">Hello World</string>
+    <string name="hello_x">Hello World %s</string>
+
+    <string name="title_popular_movie">Popular Movies</string>
+</resource>

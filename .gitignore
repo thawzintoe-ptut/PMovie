@@ -1,5 +1,6 @@
 *.iml
 .gradle
+.idea
 /local.properties
 /.idea/caches
 /.idea/libraries
@@ -13,3 +14,14 @@
 .externalNativeBuild
 .cxx
 local.properties
+/.idea
+build/
+iosApp/Podfile.lock
+iosApp/Pods/*
+iosApp/iosApp.xcworkspace/*
+iosApp/iosApp.xcodeproj/*
+!iosApp/iosApp.xcodeproj/project.pbxproj
+shared/shared.podspec
+desktopApp/build
+desktopApp/build/*
+
