@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ptut.pmovie"
+    namespace = libs.versions.nameSpace.get()
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.ptut.pmovie"
+        applicationId = libs.versions.nameSpace.get()
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1

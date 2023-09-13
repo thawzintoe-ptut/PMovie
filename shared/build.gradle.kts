@@ -138,14 +138,14 @@ ktlint {
 }
 
 multiplatformResources {
-    multiplatformResourcesPackage = "com.ptut.movie.app.shared"
+    multiplatformResourcesPackage = libs.versions.nameSpace.get()
     multiplatformResourcesClassName = "SharedRes"
     disableStaticFrameworkWarning = true
     iosBaseLocalizationRegion = "en"
 }
 
 android {
-    namespace = "com.ptut.movie.app.shared"
+    namespace = libs.versions.nameSpace.get()
     compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
